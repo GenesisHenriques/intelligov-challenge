@@ -79,7 +79,7 @@ Por conta do tempo foi decidido focar primeiramente nas funcionalidades.
 
 * Deploy do projeto
 
-* Conexão com um banco de dados
+* Salvar as tabelas em um banco de dados
 
 ---
 
