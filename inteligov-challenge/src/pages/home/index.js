@@ -8,7 +8,7 @@ import './style.css';
 
 export default function Home() {
   return (
-    <div>
+    <div className="app">
       <Header />
       <DropZone />
       <Table />

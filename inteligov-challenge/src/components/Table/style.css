@@ -3,11 +3,14 @@ table, th, td {
 }
 
 .container-table {
-  width: 108%;
+  width: 76%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2em;
 }
 
 .container-table button {
@@ -26,12 +29,12 @@ table, th, td {
   width: 70%;
   display: flex;
   justify-content: space-evenly;
+  border-radius: 10px;
 }
 
 .form input {
   text-align: center;
-  border-radius: 5px;
-  border: 1px solid #019973;
+  padding: 1em;
 }
 
 .table {
