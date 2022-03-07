@@ -97,7 +97,7 @@ export default function Table() {
               {
                 row.map((column) => <td key={column}>{column}</td>)
               }
-              <td>
+              <td className="td-button">
                 <button
                   type="button"
                   onClick={ (event) => handlerRow(event, index) }
