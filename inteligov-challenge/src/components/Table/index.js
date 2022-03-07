@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
+import './style.css';
+
 export default function Table() {
   const [csv, setCsv] = useState(null);
   const [name, setName] = useState('');
@@ -31,6 +33,14 @@ export default function Table() {
   };
 
   const handlerButtonAdd = () => {
+    if (name === "") {
+      window.alert("Digite um nome");
+      return;
+    } else if (telephone === "") {
+      window.alert("Digite um telefone");
+      return;
+    }
+
     const header = csv.header;
     const data = csv.data;
     const newData = [...data, [
@@ -43,10 +53,9 @@ export default function Table() {
   };
 
   return csv === null ? null : (
-    <div>
-      <form>
+    <div className="container-table">
+      <form className="form">
         <label>
-          Nome:
           <input
             type="text"
             placeholder="Nome"
@@ -55,7 +64,6 @@ export default function Table() {
           />
         </label>
         <label for="phone">
-          Telefone:
           <input
             type="number"
             id="phone"
@@ -70,34 +78,38 @@ export default function Table() {
           type="button"
           onClick={() => handlerButtonAdd()}
         >
-          ADICIONAR
+          Adicionar
         </button>
       </form>
-      <thead>
-        <tr>
-          {
-            csv.header.map((headerName) => <th key={headerName}>{headerName}</th>)
-          }
-        </tr>
-      </thead>
-      <tbody>
-      {
-        csv.data.map((row, index) => (
-          <tr key={index}>
+      <br />
+      <table className="table">
+        <thead>
+          <tr>
             {
-              row.map((column) => <td key={column}>{column}</td>)
+              csv.header.map((headerName) => <th key={headerName}>{headerName}</th>)
             }
-            <button
-              type="button"
-              onClick={ (event) => handlerRow(event, index) }
-            >
-              Delete
-            </button>
           </tr>
-        ))
-      }
-      </tbody>
-      
+        </thead>
+        <tbody>
+        {
+          csv.data.map((row, index) => (
+            <tr key={index}>
+              {
+                row.map((column) => <td key={column}>{column}</td>)
+              }
+              <td>
+                <button
+                  type="button"
+                  onClick={ (event) => handlerRow(event, index) }
+                >
+                  Remover
+                </button>
+              </td>
+            </tr>
+          ))
+        }
+        </tbody>
+      </table>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,700&display=swap');
 
 .header {
   background-color: rgb(255, 255, 255);
@@ -14,19 +14,23 @@
 }
 
 .tags-a {
-  margin-left: 10em;
-  background-color: blue;
 }
 
 .tags-a a {
-  background-color: red;
-  margin-right: 1em;
+  margin-right: 2em;
 }
 
 .header a {
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-  font-weight: 200;
+  font-weight: 400;
+  color: #4c4c4c;
+  fill: #4c4c4c;
+}
+
+.header a:hover {
+  color: #019973;
+  fill: #019973;
 }
 
 .btn-header {
