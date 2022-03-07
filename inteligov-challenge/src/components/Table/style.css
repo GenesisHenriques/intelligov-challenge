@@ -3,6 +3,7 @@ table, th, td {
 }
 
 .container-table {
+  width: 108%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +13,6 @@ table, th, td {
 .container-table button {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-
   font-size: 14px;
   font-weight: 800;
   fill: #fff;
@@ -28,7 +28,17 @@ table, th, td {
   justify-content: space-evenly;
 }
 
+.form input {
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #019973;
+}
+
 .table {
   align-items: center;
   width: 70%;
+}
+
+hr {
+  size: 50px;
 }
